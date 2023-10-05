@@ -1,0 +1,109 @@
+/* Общие стили для всех страниц */
+body {
+    background-color: #FAF7FF; /* Фоновый цвет для всех страниц */
+    margin: 0; /* Убираем отступы по умолчанию */
+    font-family: 'Roboto', sans-serif; /* Шрифт Roboto для текста на всех страницах */
+}
+
+/* Стили для шапки сайта */
+header {
+    background-color: #FAF7FF;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+}
+
+/* Стили для логотипа */
+.logo {
+    margin-left: 20px;
+    margin-top: 20px; /* Добавляем верхний отступ */
+}
+
+
+.logo img {
+    cursor: pointer;
+}
+
+/* Стили для меню */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+    position: relative; /* Добавляем позицию, чтобы разместить значок */
+}
+
+nav a {
+    text-decoration: none;
+    color: #7d7d7d; /* Цвет текста меню */
+    font-size: 18px; /* Размер шрифта 18px */
+    font-family: 'Roboto', sans-serif; /* Шрифт Roboto */
+    transition: color 0.3s; /* Плавное изменение цвета при наведении */
+}
+
+nav a:hover {
+    color: #6900FF; /* Цвет при наведении курсора */
+}
+
+/* Стили для выпадающего меню */
+.sub-menu {
+    display: none;
+    position: absolute;
+    background-color: #FAF7FF;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav li:hover .sub-menu {
+    display: block;
+}
+
+.sub-menu a {
+    color: #7d7d7d; /* Цвет текста в выпадающем меню */
+    text-decoration: none;
+    display: block;
+    margin: 5px 0;
+    transition: color 0.3s;
+    font-size: 18px; /* Размер шрифта 18px */
+    font-family: 'Roboto', sans-serif; /* Шрифт Roboto */
+}
+
+.sub-menu a:hover {
+    color: #6900FF; /* Цвет при наведении курсора */
+}
+
+/* Стили для значка стрелки */
+.arrow-down::before {
+    content: '\25BC'; /* Стрелка вниз (в коде Юникод) */
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+.arrow-up::before {
+    content: '\25B2'; /* Стрелка вверх (в коде Юникод) */
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+/* Стили для изменения значка при разворачивании/сворачивании меню */
+nav li:hover .arrow-down::before {
+    content: '\25B2'; /* Стрелка вверх при разворачивании меню */
+}
+
+nav li:hover .arrow-up::before {
+    content: '\25BC'; /* Стрелка вниз при сворачивании меню */
+}
+
+
+
+/* Стили для разделителя */
+.divider {
+    height: 1px; /* Высота разделителя 1px (или другое значение по желанию) */
+    background-color: #CCC; /* Светло-серый цвет разделителя */
+    margin-top: 8px; /* Верхний отступ для разделителя 8px */
+}
