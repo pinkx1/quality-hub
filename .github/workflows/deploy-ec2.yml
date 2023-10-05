@@ -22,6 +22,6 @@ jobs:
           ssh-strict: false
           script: |
             cd /var/www/quality-hub
-            sudo chown -R admin:admin /var/www/quality-hub
+            sudo chown -R ${{ secrets.SERVER_USERNAME }}:${{ secrets.SERVER_USERNAME }} /var/www/quality-hub
             git pull
             sudo chown -R www-data:www-data /var/www/quality-hub
